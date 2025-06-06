@@ -1,12 +1,11 @@
-quantNumeros = 3;
 numeros = [2, 4, 6];
-let valores = numeros.values();
+//let valores = numeros.values();
 let soma = 0
 
-for (let value of valores){
+for (let value of numeros){
     soma = soma + value;
-    //console.log(soma);
 }
 
-media = soma / quantNumeros
+media =media = soma / numeros.length
+
 console.log(media)
