@@ -1,37 +1,25 @@
-// utilizar indexOf na string
-// e lastIndexOf para comparar
-// let str = "radar";
-
-// for (i = 0; i < str.length; i++){
-    
-//     let str2 = str.slice(i, i + 1);
-//     console.log(str2);
-
-//     //console.log(str.valueOf())
-//     //console.log(str.indexOf(str[i], i))
-
-// }
-
 let str = "radar";
-let palindromo = true
+let strLetras = str.split("");
+console.log(strLetras)
 
-for (let i = 0; i < str.length / 2; i++) {
+let palavra = [];
 
-    //let str2 = str.slice(i, i + 1);   
+for (let i = 0; i < strLetras.length; i++){
+    palavra.push(strLetras[i]);
+}
 
-    if(str[i] !== str[str.length - 1 - i]){
+palavra.reverse()
+for (let i = 0; i < strLetras.length; i++){
+    if(strLetras[i] === palavra[i]){
+        palindromo = true
+
+    }else{
         palindromo = false
-        break
-        // palavra = []
-        // palavra.push(str[i])
-        // console.log(palavra)
     }
-        
-    
-}
-if(palindromo){
-    console.log(`${str} é palindromo`);
-}else{
-    console.log(`${str} não é palindromo`);
 }
 
+if(palindromo == true){
+    console.log("É palindromo");
+}else{
+    console.log("Não é palindromo");
+}
